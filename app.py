@@ -26,7 +26,7 @@ def predict():
         output = prediction
         final=[]
         for val in output:
-            if val=2:
+            if val==2:
                 final.append("Benign")
             else:
                 final.append("Cancerous")
