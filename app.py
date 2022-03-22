@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 loaded_model= pickle.load(open("model.pkl","rb"))
 
-@app.route('/')
+@app.route('/') 
 @cross_origin()
 
 def home():
