@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Breast Cancer</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<img src=
+"https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/news14109.jpg"
+         alt="zomato image", width="400", height="150", style="float:left">
+
+
+<style>
+body {
+  background-image: url("https://images.unsplash.com/photo-1584090170129-4d74e3634910?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Breast Cancer Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="clump_thickness" placeholder="clump_thickness" required="required" />
+        <input type="text" name="size_uniformity" placeholder="size_uniformity" required="required" />
+		<input type="text" name="shape_uniformity" placeholder="shape_uniformity" required="required" />
+        <input type="text" name="marginal_adhesion" placeholder="marginal_adhesion" required="required" />
+        <input type="text" name="epithelial_size" placeholder="epithelial_size" required="required" />
+        <input type="text" name="bare_nucleoli" placeholder="bare_nucleoli" required="required" />
+        <input type="text" name="bland_chromatin" placeholder="bland_chromatin" required="required" />
+        <input type="text" name="mitoses" placeholder="mitoses" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
