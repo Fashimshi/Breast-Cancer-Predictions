@@ -23,12 +23,12 @@ def predict():
         output = prediction
         final=[]
         for val in output:
-        if val=2:
-            final.append("Benign")
-        else:
-            final.append("Cancerous")
+            if val=2:
+                final.append("Benign")
+            else:
+                final.append("Cancerous")
 
-        return render_template('index.html', prediction_text='Your Cells are{}'.format(final))
+    return render_template('index.html', prediction_text='Your Cells are{}'.format(final))
     return render_template("index.html")
 
 if __name__ == "__main__":
