@@ -24,14 +24,10 @@ def predict():
         prediction = loaded_model.predict(final_features)
 
         output = prediction
-        final=[]
-        for val in output:
-            if val=2:
-                final.append("Benign")
-            else:
-                final.append("Cancerous")
+         
+        
 
-        return render_template('index.html', prediction_text='Your Cells are{}'.format(final))
+        return render_template('index.html', prediction_text='Your Cells are{}'.format(output))
     
     
     return render_template("index.html")
