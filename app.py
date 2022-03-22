@@ -6,7 +6,7 @@ import pandas as pd
 
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+loaded_model= pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 @cross_origin()
