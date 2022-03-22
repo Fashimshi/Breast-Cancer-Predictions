@@ -9,16 +9,16 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
-@cross_origin()
+
 def home():
     return render_template('index.html')
 
 @app.route("/predict", methods = ["POST"])
 def predict():
-    if request.method == "POST":
-        features = [int(x) for x in request.form.values()]
-        final_features = [np.array(features)]
-        prediction = model.predict(final_features)
+    
+    features = [int(x) for x in request.form.values()]
+    final_features = [np.array(features)]
+    prediction = model.predict(final_features)
 
         output = prediction
         final=[]
