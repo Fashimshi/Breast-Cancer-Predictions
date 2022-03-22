@@ -23,7 +23,7 @@ def predict():
         final_features = [np.array(features)]
         prediction = loaded_model.predict(final_features)
 
-        output = prediction
+        output = round(prediction[0],1)
          
         
 
