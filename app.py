@@ -1,12 +1,12 @@
 from flask import Flask, request, render_template
 from flask_cors import cross_origin
-import sklearn
 import pickle
 import pandas as pd
 
 
 app = Flask(__name__)
-loaded_model= pickle.load(open('model.pkl', 'rb'))
+
+loaded_model= pickle.load(open("model.pkl","rb"))
 
 @app.route('/')
 @cross_origin()
@@ -21,7 +21,7 @@ def predict():
     if request.method == "POST":
         features = [int(x) for x in request.form.values()]
         final_features = [np.array(features)]
-        prediction = model.predict(final_features)
+        prediction = loaded_model.predict(final_features)
 
         output = prediction
         final=[]
