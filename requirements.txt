@@ -31,4 +31,4 @@ ipython-genutils==0.2.0
 ipywidgets==7.4.2
 absl-py==0.7.1
 appnope==0.1.0
-Kneighbors>=0.22
+
