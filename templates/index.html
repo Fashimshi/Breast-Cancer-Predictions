@@ -13,10 +13,6 @@
 
 <body>
 
-<img src=
-"https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/news14109.jpg"
-         alt="zomato image", width="400", height="150", style="float:left">
-
 
 <style>
 body {
@@ -35,7 +31,7 @@ body {
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="clump_thickness" placeholder="clump_thickness" required="required" />
         <input type="text" name="size_uniformity" placeholder="size_uniformity" required="required" />
-		<input type="text" name="shape_uniformity" placeholder="shape_uniformity" required="required" />
+	<input type="text" name="shape_uniformity" placeholder="shape_uniformity" required="required" />
         <input type="text" name="marginal_adhesion" placeholder="marginal_adhesion" required="required" />
         <input type="text" name="epithelial_size" placeholder="epithelial_size" required="required" />
         <input type="text" name="bare_nucleoli" placeholder="bare_nucleoli" required="required" />
