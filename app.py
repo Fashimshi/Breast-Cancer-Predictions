@@ -25,7 +25,7 @@ def predict():
         for val in output:
         if val=2:
             final.append("Benign")
-        else: val=4:
+        else:
             final.append("Cancerous")
 
         return render_template('index.html', prediction_text='Your Cells are{}'.format(final))
