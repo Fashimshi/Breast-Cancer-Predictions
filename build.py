@@ -25,7 +25,7 @@ y_predknn=knn_model.predict(x_test)
 #Use pickle to save our model so that we can use it later
 
 import pickle
-# Saving model
+# Saving model 
 
 pickle.dump(knn_model, open("model.pkl","wb"))
 loaded_model=pickle.load(open("model.pkl","rb"))
